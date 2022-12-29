@@ -2,6 +2,10 @@ const app = require('express');
 const mongoose = require('mongoose');
 const router = app.Router();
 
+const Student = mongoose.model('Student', {
+  name: String,
+  courses: [],
+});
 
 router.get('/students', async (req, res) => {
     const students = await Student.find();

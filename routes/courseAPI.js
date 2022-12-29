@@ -6,10 +6,7 @@ const Course = mongoose.model('Course', {
     name: String
   });
   
-const Student = mongoose.model('Student', {
-  name: String,
-  courses: [],
-});
+
 
 router.put("/courses/:courseid/students/:studentid", async (req, res) => {
     const student = await Student.findById(req.params.studentid);
