@@ -1,4 +1,5 @@
 const app = require('express');
+const mongoose = require('mongoose');
 const router = app.Router();
 
 const Course = mongoose.model('Course', {
