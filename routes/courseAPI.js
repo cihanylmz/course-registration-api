@@ -1,12 +1,10 @@
 const app = require('express');
 const mongoose = require('mongoose');
 const router = app.Router();
+const Course = require('../models/CourseModel.js');
+const Student = require('../models/StudentModel.js');
 
-const Course = mongoose.model('Course', {
-    name: String
-  });
   
-
 
 router.put("/courses/:courseid/students/:studentid", async (req, res) => {
     const student = await Student.findById(req.params.studentid);
